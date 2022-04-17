@@ -1,0 +1,96 @@
+.toast-item-wrap {
+  width: 200px;
+  display: block;
+  box-shadow: rgba(50, 50, 93, 0.25) 0 6px 12px -2px, rgba(0, 0, 0, 0.3) 0 3px 7px -3px;
+  border-radius: 5px;
+  overflow: hidden;
+  //default success
+  background-color: #38B2AC;
+  color: #fff;
+
+  &.info {
+    background-color: #3182ce;
+  }
+
+  &.error {
+    background-color: #F56565;
+    color: #fff;
+  }
+
+
+  &.left {
+    animation: right-to-left .3s ease-in-out;
+
+    &.closing {
+      animation: close-left-position .3s ease;
+      animation-fill-mode: both;
+    }
+  }
+
+  &.right {
+    animation: left-to-right .3s ease-in-out;
+
+    &.closing {
+      animation: close-right-position .3s ease;
+      animation-fill-mode: both;
+    }
+  }
+}
+
+.toast {
+  padding: 15px;
+  min-height: 50px;
+  word-break: break-all;
+  overflow: hidden;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.progress{
+  height: 3px;
+  background-color: #fff;
+  padding-bottom: 5px;
+  animation: progress ease-in-out;
+  width: 0;
+  border-radius: 5px;
+  animation-direction: reverse;
+}
+
+@keyframes progress {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes close-right-position {
+  100% {
+    transform: translateX(150%);
+  }
+}
+
+@keyframes close-left-position {
+  100% {
+    transform: translateX(-150%);
+  }
+}
+
+@keyframes left-to-right {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes right-to-left {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

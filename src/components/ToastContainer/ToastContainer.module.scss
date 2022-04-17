@@ -1,0 +1,21 @@
+.toast-container-wrap{
+  position: fixed;
+  top:0;
+  z-index: 9999;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  transition: .3s all ease;
+  min-height: auto;
+
+  //default left direction
+  &.left{
+    left:0;
+  }
+
+  &.right{
+    right: 0;
+  }
+}

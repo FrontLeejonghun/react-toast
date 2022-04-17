@@ -21,8 +21,8 @@ module.exports = {
   trailingSlash: true,
   compiler: {
     reactRemoveProperties: { properties: ['^data-cy$'] },
-    removeConsole: {
-      exclude: ['error'],
-    },
+    // removeConsole: {
+    //   exclude: ['error'],
+    // },
   },
 };
